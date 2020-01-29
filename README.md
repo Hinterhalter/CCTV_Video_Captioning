@@ -20,5 +20,5 @@ Reference
 ----------------------------------------------
 |#|title|source|note|
 |:----:|:-----|:-------|:------|
-|1|[ECO: Efficient Convolutional Network for Online Video Understanding](#국가건강검진-건강위험평가-개선-참고-페이지)|질병관리본부|health_data 변수 전처리 참고, 심뇌혈관질환 위험도 계산|
-|2|국가중점개방데이터 사용자 매뉴얼(ver4.0)|국민건강보험공단 빅데이터운영실|health_data 변수 파악|
+|1|[ECO: Efficient Convolutional Network for Online Video Understanding](https://github.com/mzolfaghari/ECO-efficient-video-understanding)|ECCV2018|핵심 이론 및 실행 코드 참고|
+|2|TSN-Pytorch|https://github.com/yjxiong/tsn-pytorch|영상 데이터 프레임 단위 추출|
