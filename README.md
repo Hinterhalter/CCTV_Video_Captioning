@@ -38,5 +38,5 @@ Reference
 |#|title|source|note|
 |:----:|:-----|:-------|:------|
 |1|[ECO: Efficient Convolutional Network for Online Video Understanding](https://github.com/mzolfaghari/ECO-efficient-video-understanding)|ECCV2018|핵심 이론 및 실행 코드 참고|
-|2|TSN-Pytorch|https://github.com/yjxiong/tsn-pytorch|영상 데이터 프레임 단위 추출|
-|3|video-caption.pytorch|(https://github.com/xiadingZ/video-caption.pytorch)|
+|2|[TSN-Pytorch](https://github.com/yjxiong/tsn-pytorch)||영상 데이터 프레임 단위 추출|
+|3|[video-caption.pytorch](https://github.com/xiadingZ/video-caption.pytorch)||
