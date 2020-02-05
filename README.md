@@ -1,7 +1,7 @@
 # CCTV_Video_Captioning
 Video captioning project using deep learning models. 
 
- **Author(s)** : [김송일](https://github.com/camelia13), [박병수](https://github.com/Hinterhalter), [송재민]
+ **Author(s)** : [김송일](https://github.com/camelia13), [박병수](https://github.com/Hinterhalter), [송재민](https://github.com/songjaemin93)
  * **Date** : 20/01/16 ~ 20/03/13
 
 ## 프로젝트 활동 일지
