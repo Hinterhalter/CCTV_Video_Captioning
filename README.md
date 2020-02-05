@@ -33,6 +33,56 @@ Video captioning project using deep learning models.
 
 ----------------------------------------------
 
+### 20.2.3
+
+#### process :
+
+- video-caption.pytorch(https://github.com/xiadingZ/video-caption.pytorch)을 구현하기 위해 다양한 시도를 해봄
+- 환경을 구축하고 github에 있는 튜토리얼을 따라 실행하는 중
+- Train.py를 실행시켜서 비디오 파일을 프레임 단위로 나누고 .npy파일로 변환하여 Feature를 추출하는 작업을 함
+
+#### issue : 
+
+- Train.py 코드를 실행시켰을 때 Feature들이 추출되었고 모델의 weight파일이 생성되었으나
+- Eval.py 코드를 통해 모델 평가를 진행하려고 했으나 오류가 발생함
+- 구동에 필요한 파일이 없는 것으로 보임
+
+----------------------------------------------
+
+
+### 20.2.4
+
+#### process :
+
+- video-caption.pytorch(https://github.com/xiadingZ/video-caption.pytorch) 
+- 필요한 데이터 다운로드
+- Eval.py를 실행
+
+#### issue : 
+
+- Eval.py에 필요한 데이터셋의 가중치 파일이 없어서 오류가 나는 것으로 보임
+- 코드와 Github를 분석해본 결과 Video Captioning에 대한 결과물이 나오는 부분을 찾지 못함
+- 영상 데이터에 대한 Feature 추출, model 학습까지는 가능한 코드지만, 최종적으로 결과물(캡션이 달리는 영상)이 나오지 않는 코드라고 판단됨
+- 다시 ECO: Efficient Convolutional Network for Online Video Understanding로 돌아가기로 결정함
+
+----------------------------------------------
+
+### 20.2.5
+
+#### process :
+
+- ECO 논문 코드 구동에 필요한 작업 진행
+- ECO 코드의 선처리 작업으로 필요한 TSN을 진행하는중
+- Docker 학습
+
+#### issue : 
+
+- ECO 코드의 선처리 작업으로 필요한 TSN을 구동하려고 했으나 개발환경이 달라서 구동이 안됨
+- 구글링을 통해서 간단하게 실행해보려고 했으나 Docker를 조원 전체가 다뤄보지 않아서 어려움이 발생함
+- 같은 개발환경을 만들기 위해 개인적으로 Docker를 공부 
+
+----------------------------------------------
+
 Reference
 ----------------------------------------------
 |#|title|source|note|
