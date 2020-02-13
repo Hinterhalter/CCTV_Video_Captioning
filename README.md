@@ -3,6 +3,15 @@ Video captioning project using deep learning models.
 
  **Author(s)** : [김송일](https://github.com/camelia13), [박병수](https://github.com/Hinterhalter), [송재민](https://github.com/songjaemin93)
  * **Date** : 20/01/16 ~ 20/03/13
+ * **Goal** : 
+ - 아래의 이미지처럼, video 이미지를 학습하여 영상에 video captioning을 생성하는 것 
+ - 나아가 CCTV 영상을 가지고 영상 내의 객체들이 하고 있는 행동을 captioning log로 남겨서 CCTV 상황을 기록하고 사용자에게 알려줄 수 있다.
+
+![uc_gif1 (1)](https://user-images.githubusercontent.com/32046460/74390557-07469e80-4e45-11ea-844b-c4c8374bf387.gif)
+![sm_gif1](https://user-images.githubusercontent.com/32046460/74390560-0ada2580-4e45-11ea-98a3-dcfa94508c54.gif)
+
+<img source : https://github.com/mzolfaghari/ECO-efficient-video-understanding >
+
 
 ## 프로젝트 활동 일지
 ----------------------------------------------
