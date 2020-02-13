@@ -86,6 +86,41 @@ Video captioning project using deep learning models.
 
 ----------------------------------------------
 
+
+### 20.2.7
+
+#### process :
+
+- ECO video captioning 구동을 위한 영상 데이터 프레임 추출 진행
+- UCF101 dataset을 사용하여 video 목록 별로 폴더를 나누고 개별 video 파일을 기준으로 영상 프레임을 추출
+- dataset.py, gen_dataset_list.py 파일 코드 분석 중
+
+#### issue : 
+
+- ECO pytorch 사용법을 따라 구동을 진행했으나 파일 경로를 찾지 못한다는 에러가 계속적으로 발생함.
+- 코드 내에 경로 문제이거나 train과 validation을 나누는 tuple 형식의 datalist의 양식과 프레임 파일이 맞지 않아 오류가 발생하는 것으로 예상됨
+
+----------------------------------------------
+
+
+### 20.2.12
+
+#### process :
+![Screenshot from 2020-02-13 09-25-56](https://user-images.githubusercontent.com/32046460/74390105-99e63e00-4e43-11ea-9e30-5f658df3d9fa.png)
+
+- 위의 이미지와 같이 Generate dataset lists 부분을 진행
+- 예제에 보면 python gen_dataset_lists.py ucf101 <프레임추출 파일 경로>로 입력하라고 되어있음
+- frame 이미지 파일을 <dataset_frames_root_path>/<video_name>/<frame_images> 형식으로 정렬하라고 되어있음
+
+#### issue : 
+
+- 기존에 오류가 나던 경로 정렬은 ./dataset/UCF101/<영상분류폴더>/<개별영상폴더>/<추출된프레임이미지> 순으로 했으나 오류가 발생함
+- 오류 수정 중에 변경한 정렬 방식은 ./dataset/UCF101/<개별영상폴더>/<추출된프레임이미지> 순으로 하였다.
+- 새로운 방식으로 정렬하니 gen_dataset_lists.py가 정상적으로 작동하고 dataset_list.txt 파일을 생성하는데 성공함
+- 이후에 ECO 파일의 demo를 구동하려고 하니 key error가 발생함
+
+----------------------------------------------
+
 Reference
 ----------------------------------------------
 |#|title|source|note|
