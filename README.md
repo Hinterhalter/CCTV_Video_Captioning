@@ -4,8 +4,8 @@ Video captioning project using deep learning models.
  **Author(s)** : [김송일](https://github.com/camelia13), [박병수](https://github.com/Hinterhalter), [송재민](https://github.com/songjaemin93)
  * **Date** : 20/01/16 ~ 20/03/13
  * **Goal** : 
- - 아래의 이미지처럼, video 이미지를 학습하여 영상에 video captioning을 생성하는 것 
- - 나아가 CCTV 영상을 가지고 영상 내의 객체들이 하고 있는 행동을 captioning log로 남겨서 CCTV 상황을 기록하고 사용자에게 알려줄 수 있다.
+  - 아래의 이미지처럼, video 이미지를 학습하여 영상에 video captioning을 생성하는 것 
+  - 나아가 CCTV 영상을 가지고 영상 내의 객체들이 하고 있는 행동을 captioning log로 남겨서 CCTV 상황을 기록하고 사용자에게 알려줄 수 있다.
 
 ![uc_gif1 (1)](https://user-images.githubusercontent.com/32046460/74390557-07469e80-4e45-11ea-844b-c4c8374bf387.gif)
 ![sm_gif1](https://user-images.githubusercontent.com/32046460/74390560-0ada2580-4e45-11ea-98a3-dcfa94508c54.gif)
@@ -127,6 +127,34 @@ Video captioning project using deep learning models.
 - 오류 수정 중에 변경한 정렬 방식은 ./dataset/UCF101/<개별영상폴더>/<추출된프레임이미지> 순으로 하였다.
 - 새로운 방식으로 정렬하니 gen_dataset_lists.py가 정상적으로 작동하고 dataset_list.txt 파일을 생성하는데 성공함
 - 이후에 ECO 파일의 demo를 구동하려고 하니 key error가 발생함
+
+----------------------------------------------
+
+### 20.2.14
+
+#### process :
+
+- 모델을 학습시키고 weight 파일을 생성하는 main.py 코드를 실행시키는데 성공함.
+- 계속적으로 발생했던 문제가 경로를 찾지 못하는 것이었고 또 CUDA OUT OF MEMORY 에러가 발생하는 것이었다.
+
+```shell
+# main.py 실행에 필요한 코드
+python main.py ucf101 RGB <ucf101_rgb_train_list> <ucf101_rgb_val_list> \
+        --arch ECO --num_segments 4 --gd 5 --lr 0.001 --lr_steps 30 60 --epochs 80 \
+        -b 32 -i 1 -j 1 --dropout 0.8 --snapshot_pref ucf101_ECO --rgb_prefix img_ \
+        --consensus_type identity --eval-freq 1
+```
+- 이 코드를 실행시키면 항상 오류가 발생하여 진행 할 수 없었으나, batch size를 32에서 16으로 줄이니 병렬 GPU에서 코드가 구동되었다.
+- 또한 epoch이 지나치게 높은 편이었고 epoch을 많이 준다고해도 loss는 이미 수렴하여 모델이 개선되지 않았기 때문에 epochs는 5번 정도로 설정하였다.
+- 또한 CPU에서 GPU로 이미지 파일을 넘겨주는 -j 파라미터를 8로 변경하여 좀 더 빠르게 학습을 시킬 수 있었다.
+
+#### issue : 
+
+- main.py를 실행시켰으나 모델 파일만 생성되고 별다르게 산출물이 없었다.
+- 영상에 캡셔닝을 진행하고 싶었지만 영상에 대한 demo는 존재하지 않았다.
+- ECO 저자의 깃허브를 가보니 모델 부분까지만 코드를 업로드 해놨고 실제 비디오에 적용하는 내용은 없었다.
+- 다른 딥러닝 기법(YOLO) 등에서 실시간으로 웹캠 등을 사용하여 디텍팅하는 것에 착안하여 코드를 분석하고
+- Train한 모델을 가지고 실제 영상에 적용해보는 방향으로 진행할 계획이다. 
 
 ----------------------------------------------
 
