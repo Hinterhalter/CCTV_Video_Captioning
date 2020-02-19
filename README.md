@@ -169,7 +169,7 @@ python main.py ucf101 RGB <ucf101_rgb_train_list> <ucf101_rgb_val_list> \
 |         |            |   |
 | :-------------: |:-------------:| :-----:|
 | ![10802](https://user-images.githubusercontent.com/32046460/74805262-f0f98080-5325-11ea-84f0-042834077363.gif)| ![12501](https://user-images.githubusercontent.com/32046460/74805267-f22aad80-5325-11ea-949b-29541b3f92b2.gif) | ![12727](https://user-images.githubusercontent.com/32046460/74805268-f2c34400-5325-11ea-92ab-375dbaa8f7b9.gif)
-| two men are talking about a cooking show | a  woman is cooking | a dog is running around a field |
+| a dog is running around a field | a  woman is cooking | two men are talking about a cooking show |
   
   2. [vijayvee/video-captioning](https://github.com/vijayvee/video-captioning)
 - 코드 선정 기준은 우선 간단하고 구동이 가능한 코드로 찾아봤다. 두 코드는 모두 결과물이 영상이 표시되는 코드이다.
