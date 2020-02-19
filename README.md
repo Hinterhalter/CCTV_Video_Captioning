@@ -200,7 +200,6 @@ python main.py ucf101 RGB <ucf101_rgb_train_list> <ucf101_rgb_val_list> \
 - 너무 시간이 오래걸려 epoch을 2만 주고 결과를 살펴보려고 했으나 상당히 오래걸림
 - keras 코드라 gpu를 가동을 하는지 안하는지 확인하기가 어려움.
 
-### 2020.02.19
 
 Pre-trained Models 다 다운받아 압축풀고 그 중 하나 실행시킴
 ```shell 
