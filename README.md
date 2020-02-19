@@ -200,19 +200,18 @@ python main.py ucf101 RGB <ucf101_rgb_train_list> <ucf101_rgb_val_list> \
 - 너무 시간이 오래걸려 epoch을 2만 주고 결과를 살펴보려고 했으나 상당히 오래걸림
 - keras 코드라 gpu를 가동을 하는지 안하는지 확인하기가 어려움.
 
+#### Pre-trained Model 사용
 
 Pre-trained Models 다 다운받아 압축풀고 그 중 하나 실행시킴
 ```shell 
 python parser.py server -s -m  /home/pirl/Downloads/project/Video2Description/ResNet_D512L512_G128G64_D1024D0.20BN_BDLSTM1024_D0.2L1024DVS_model.dat_4987_loss_2.203_Cider0.342_Blue0.353_Rouge0.572_Meteor0.256
-
 ```
-Preparing for Register Server
-Listening to 5001
-문구 나오면
+1. Preparing for Register Server
+2. Listening to 5001 메세지가 나오면 
+```shell
+# 터미널창 하나 더 열어서 입력.
 
-```
-shell
-python app.py #터미널창 하나 더 열어서 입력.
+python app.py
 ```
 실행 후 동영상 업로드하면 비디오 캡셔닝 확인 가능
 
