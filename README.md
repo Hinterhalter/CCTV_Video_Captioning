@@ -158,10 +158,57 @@ python main.py ucf101 RGB <ucf101_rgb_train_list> <ucf101_rgb_val_list> \
 
 ----------------------------------------------
 
+### 20.2.18
+
+#### process :
+
+- 계속해서 진행하던 ECO를 포기하고 다른 코드를 찾기로 결정했다.
+- 찾은 코드는 두개이다.
+  1. [scopeInfinity/Video2Description](https://github.com/scopeInfinity/Video2Description)
+  
+|         |            |   |
+| :-------------: |:-------------:| :-----:|
+| ![10802](https://user-images.githubusercontent.com/32046460/74805262-f0f98080-5325-11ea-84f0-042834077363.gif)| ![12501](https://user-images.githubusercontent.com/32046460/74805267-f22aad80-5325-11ea-949b-29541b3f92b2.gif) | ![12727](https://user-images.githubusercontent.com/32046460/74805268-f2c34400-5325-11ea-92ab-375dbaa8f7b9.gif)
+| two men are talking about a cooking show | a  woman is cooking | a dog is running around a field |
+  
+  2. [vijayvee/video-captioning](https://github.com/vijayvee/video-captioning)
+- 코드 선정 기준은 우선 간단하고 구동이 가능한 코드로 찾아봤다. 두 코드는 모두 결과물이 영상이 표시되는 코드이다.
+- 우선 코드 설명이 자세하고 결과물이 확실하게 나오는 [scopeInfinity/Video2Description](https://github.com/scopeInfinity/Video2Description)이 코드를 진행하기로 했다.
+
+#### issue : 
+
+- 코드가 python2.7로 되어있어 환경을 설정하는데 어려움이있었다.
+- 코드 배포자가 conda 환경을 yml파일로 올려주긴 했지만 패키지들간의 충돌로인해 제대로 환경이 구축되지않았다.
+- 하나하나 라이브러리를 설치하는 작업이 오래걸렸다.
+- 모델을 Train 시키려고했지만 data_generator에서 오류가 발생하여 제대로 실행되지 않았다.
+- 또한 실시간으로 데이터를 웹에서 다운받아 진행하는 부분이 있는데 배포자가 구현해놓은 코드에 있는 URL 홈페이지가 개편되어 더 이상 사용할 수 없는 문제가 있었다.
+
+
+### 20.2.19
+
+#### process :
+
+- Video2Description 코드 오류 수정중
+- 사용한 데이터가 MSR-VTT dataset인데 데이터를 다운받았을 때 동영상 파일명이 "video*.map" 형식으로 되어있음
+- 코드 중에 int를 리스트에 추가하여 datalist를 만드는 코드가 있었는데 video+숫자 형식으로 들어가버려서 오류가 발생함
+- video string을 제거해주고 진행을 했으나 그 방식으로 하니 Train 코드가 돌아가지 않고 오류가 발생함
+- 이 부분을 해결하기 위해 데이터 자체에 파일명에서 'video'라는 것을 빼버리고 '숫자.mp4'형식으로 변경해주니
+- train 파일이 제대로 돌아감
+
+#### issue : 
+
+- 너무 시간이 오래걸려 epoch을 2만 주고 결과를 살펴보려고 했으나 상당히 오래걸림
+- keras 코드라 gpu를 가동을 하는지 안하는지 확인하기가 어려움.
+
+
+----------------------------------------------
+
 Reference
 ----------------------------------------------
 |#|title|source|note|
 |:----:|:-----|:-------|:------|
 |1|[ECO: Efficient Convolutional Network for Online Video Understanding](https://github.com/mzolfaghari/ECO-efficient-video-understanding)|ECCV2018|핵심 이론 및 실행 코드 참고|
 |2|[TSN-Pytorch](https://github.com/yjxiong/tsn-pytorch)||영상 데이터 프레임 단위 추출|
-|3|[video-caption.pytorch](https://github.com/xiadingZ/video-caption.pytorch)||
+|3|[video-caption.pytorch](https://github.com/xiadingZ/video-caption.pytorch)|||
+|4|[scopeInfinity/Video2Description](https://github.com/scopeInfinity/Video2Description)|LSTM, GRU 사용|Keras|
+|5|[vijayvee/video-captioning](https://github.com/vijayvee/video-captioning)|
