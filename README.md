@@ -243,3 +243,4 @@ Reference
 |3|[video-caption.pytorch](https://github.com/xiadingZ/video-caption.pytorch)|||
 |4|[scopeInfinity/Video2Description](https://github.com/scopeInfinity/Video2Description)|LSTM, GRU 사용|Keras|
 |5|[vijayvee/video-captioning](https://github.com/vijayvee/video-captioning)|
+|6|[grounded-video-description](https://github.com/facebookresearch/grounded-video-description/tree/flickr_branch)||
