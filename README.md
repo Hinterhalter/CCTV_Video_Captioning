@@ -236,11 +236,11 @@ python app.py
 
 Reference
 ----------------------------------------------
-|#|title|source|note|
+|#|title|framework|note|
 |:----:|:-----|:-------|:------|
-|1|[ECO: Efficient Convolutional Network for Online Video Understanding](https://github.com/mzolfaghari/ECO-efficient-video-understanding)|ECCV2018|핵심 이론 및 실행 코드 참고|
-|2|[TSN-Pytorch](https://github.com/yjxiong/tsn-pytorch)||영상 데이터 프레임 단위 추출|
-|3|[video-caption.pytorch](https://github.com/xiadingZ/video-caption.pytorch)|||
-|4|[scopeInfinity/Video2Description](https://github.com/scopeInfinity/Video2Description)|LSTM, GRU 사용|Keras|
-|5|[vijayvee/video-captioning](https://github.com/vijayvee/video-captioning)|
-|6|[grounded-video-description](https://github.com/facebookresearch/grounded-video-description/tree/flickr_branch)||
+|1|[ECO: Efficient Convolutional Network for Online Video Understanding](https://github.com/mzolfaghari/ECO-efficient-video-understanding)|Pytorch|핵심 이론 및 실행 코드 참고|
+|2|[TSN-Pytorch](https://github.com/yjxiong/tsn-pytorch)|Pytorch|영상 데이터 프레임 단위 추출|
+|3|[video-caption.pytorch](https://github.com/xiadingZ/video-caption.pytorch)|Pytorch||
+|4|[scopeInfinity/Video2Description](https://github.com/scopeInfinity/Video2Description)|Keras|LSTM, GRU 사용|
+|5|[vijayvee/video-captioning](https://github.com/vijayvee/video-captioning)|||
+|6|[grounded-video-description](https://github.com/facebookresearch/grounded-video-description/tree/flickr_branch)|Pytorch|
