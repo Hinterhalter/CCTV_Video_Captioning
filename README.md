@@ -234,6 +234,20 @@ python app.py
 - 데이터 파일을 받는데 상당히 오래걸린다.
 ----------------------------------------------
 
+### 20.2.27
+
+#### process :
+
+- [grounded-video-description](https://github.com/facebookresearch/grounded-video-description/tree/flickr_branch) 실행시키고 코드를 분석하는 단계
+- 한 장의 이미지에 대해 dense captioning이 달린 결과물을 얻었다. dense captioning은 아래의 이미지를 참고
+![dense-captioning](https://github.com/jcjohnson/densecap/blob/master/imgs/resultsfig.png)
+
+#### issue : 
+
+- No mudile named 'pycocoevalcap' 에러가 발생하였는데 사이트마다 제시한 해결 방법이 달라 시행착오를 겪었다.
+- train 모드가 아닐 때 evaluation이 실행되어야하나 main 모듈안에 eval 함수는 정의되어 있지만 구동되지 않아 이 부분에 대한 코드를 직접 작성해야 한다.
+- evaluation 과정 중에 결과물(dense caption된 이미지)은 생성되나 오류가 발생해 끝까지 실행되지 않는다. 현재 이 문제를 해결중 
+
 Reference
 ----------------------------------------------
 |#|title|framework|note|
