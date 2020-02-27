@@ -241,6 +241,7 @@ python app.py
 - [grounded-video-description](https://github.com/facebookresearch/grounded-video-description/tree/flickr_branch) 실행시키고 코드를 분석하는 단계
 - 한 장의 이미지에 대해 dense captioning이 달린 결과물을 얻었다. dense captioning은 아래의 이미지를 참고
 ![dense-captioning](https://github.com/jcjohnson/densecap/blob/master/imgs/resultsfig.png)
+- 코드 데모를 실행하여 산출된 결과물 ![2737609659_generated_sent](https://user-images.githubusercontent.com/32046460/75421711-364d2c00-597e-11ea-95f4-bc34518c4c77.jpg)
 
 #### issue : 
 
