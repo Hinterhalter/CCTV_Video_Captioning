@@ -32,6 +32,7 @@ import torchvision.transforms as transforms
 import pdb
 
 from eval_grd_flickr30k_entities import FlickrGrdEval
+
 import warnings
 warnings.filterwarnings("ignore")
 
@@ -352,9 +353,9 @@ def eval(epoch, opt, vis=None, vis_window=None):
                 if opt.vis_attn:
                     if torch.sum(proposals[k]) != 0:
                         vis_infer(img_show[k], entry['image_id'], entry['caption'], att2_weights[k].cpu().data, proposals[k].data, sim_mat[k].cpu().data)
-                        print('GT sent: {} \nattn prec (obj): {:.3f} ({}), recall (obj): {:.3f} ({})' \
-                                .format('UNK', np.mean(ba_per_sent_prec[img_id[k].item()]), len(ba_per_sent_prec[img_id[k].item()]),
-                                np.mean(ba_per_sent_recall[img_id[k].item()]), len(ba_per_sent_recall[img_id[k].item()])))
+                        # print('GT sent: {} \nattn prec (obj): {:.3f} ({}), recall (obj): {:.3f} ({})' \
+                                # .format('UNK', np.mean(ba_per_sent_prec[img_id[k].item()]), len(ba_per_sent_prec[img_id[k].item()]),
+                                # np.mean(ba_per_sent_recall[img_id[k].item()]), len(ba_per_sent_recall[img_id[k].item()])))
                         print('*'*80)
 
 
