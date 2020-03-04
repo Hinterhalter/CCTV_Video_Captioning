@@ -257,11 +257,11 @@ python app.py
 - evaluation 및 visulization을 위해 코드를 분석하는 중
 - 이 코드를 통해 나온 추가적인 결과물들을 얻음.
 
-#### Good Cases :
+  #### Good Cases :
 ![1463072715_generated_sent](https://user-images.githubusercontent.com/32046460/75862849-e28d8780-5e42-11ea-81f7-e2605e3b838e.jpg)
 ![2338791560_generated_sent](https://user-images.githubusercontent.com/32046460/75862889-f46f2a80-5e42-11ea-84ec-2f5ed443f5de.jpg)
 
-#### Not Good Cases :
+  #### Not Good Cases :
 
 ![3560125106_generated_sent](https://user-images.githubusercontent.com/32046460/75863188-6c3d5500-5e43-11ea-8fad-917bc8385ca6.jpg)
 ![6563291133_generated_sent](https://user-images.githubusercontent.com/32046460/75863330-a0b11100-5e43-11ea-948b-dc677e1bf084.jpg)
@@ -271,6 +271,7 @@ python app.py
 - 데이터 셋 때문인지 동물에 대한 캡셔닝이 비교적 정확했다.
 - 안 좋게 나온 결과들이 있었지만 대부분 괜찮은 캡셔닝을 생성했다.
 - 안 좋은 케이스는 정확하게 행동을 캐치하지 못하거나 이미지 내에서 더 중요한 객체보다 주변을 캡셔닝하는 경우였다.
+
 
 Reference
 ----------------------------------------------
