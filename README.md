@@ -257,11 +257,12 @@ python app.py
 - evaluation 및 visulization을 위해 코드를 분석하는 중
 - 이 코드를 통해 나온 추가적인 결과물들을 얻음.
 
-  #### Good Cases :
+#### Good Cases :
+  
 ![1463072715_generated_sent](https://user-images.githubusercontent.com/32046460/75862849-e28d8780-5e42-11ea-81f7-e2605e3b838e.jpg)
 ![2338791560_generated_sent](https://user-images.githubusercontent.com/32046460/75862889-f46f2a80-5e42-11ea-84ec-2f5ed443f5de.jpg)
 
-  #### Not Good Cases :
+#### Not Good Cases :
 
 ![3560125106_generated_sent](https://user-images.githubusercontent.com/32046460/75863188-6c3d5500-5e43-11ea-8fad-917bc8385ca6.jpg)
 ![6563291133_generated_sent](https://user-images.githubusercontent.com/32046460/75863330-a0b11100-5e43-11ea-948b-dc677e1bf084.jpg)
