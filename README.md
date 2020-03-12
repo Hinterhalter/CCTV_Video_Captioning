@@ -273,6 +273,19 @@ python app.py
 - 안 좋게 나온 결과들이 있었지만 대부분 괜찮은 캡셔닝을 생성했다.
 - 안 좋은 케이스는 정확하게 행동을 캐치하지 못하거나 이미지 내에서 더 중요한 객체보다 주변을 캡셔닝하는 경우였다.
 
+#### 20.3.12
+
+__최종 결과__:
+
+1. 최종 목표로 했던 동영상에 대한 실시간 캡셔닝은 달성하지 못했다.
+2. 한 이미지에 여러 객체들을 추출하여 캡션을 생성하는 grounded-video-description은 결과물을 산출하는데 성공하였다.
+3. 동영상에 대한 캡션은 각 영상에 하나의 캡션을 만들어내는 것까지는 성공하였다.
+4. 하지만 pretrained 모델을 사용해서 그런지 외부 데이터를 test로 넣었을 때는 좋은 결과를 내지못했다.
+
+----------------------------------------------
+### To Do
+
+
 
 Reference
 ----------------------------------------------
@@ -282,5 +295,5 @@ Reference
 |2|[TSN-Pytorch](https://github.com/yjxiong/tsn-pytorch)|Pytorch|영상 데이터 프레임 단위 추출|
 |3|[video-caption.pytorch](https://github.com/xiadingZ/video-caption.pytorch)|Pytorch||
 |4|[scopeInfinity/Video2Description](https://github.com/scopeInfinity/Video2Description)|Keras|LSTM, GRU 사용|
-|5|[vijayvee/video-captioning](https://github.com/vijayvee/video-captioning)|||
-|6|[grounded-video-description](https://github.com/facebookresearch/grounded-video-description/tree/flickr_branch)|Pytorch|
+|5|[grounded-video-description](https://github.com/facebookresearch/grounded-video-description/tree/flickr_branch)|Pytorch|
+|6|[a-PyTorch-Tutorial-to-Image-Captioning](https://github.com/sgrvinod/a-PyTorch-Tutorial-to-Image-Captioning)|Pytorch|Image Captioning|
